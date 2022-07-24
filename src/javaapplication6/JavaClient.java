@@ -6,7 +6,10 @@ package javaapplication6;
 
 /**
  *
- * @author clemente
+ * @author clemente 
+ * @objetivo: Prueba de conexion SAP -HANA Bussines Tegnology Plataforma
+ * El jdbc debe desacargarse de la pagina de sap 
+ * y agregar el jar en las libraries referencias 
  */
 import java.sql.*;
 import com.sap.db.jdbc.Driver;
