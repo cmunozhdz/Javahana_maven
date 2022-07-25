@@ -99998,3 +99998,10 @@
 4826
 971
 710
+
+
+066607a9-8137-4fdb-8197-403321cdf12b.hana.trial-us10.hanacloud.ondemand.com:443
+
+\c -n 066607a9-8137-4fdb-8197-403321cdf12b.hana.trial-us10.hanacloud.ondemand.com:443 -u DBADMIN -p Kl3m3n73$$
+
+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
