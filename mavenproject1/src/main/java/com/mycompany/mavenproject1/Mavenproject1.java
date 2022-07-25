@@ -50,6 +50,8 @@ public class Mavenproject1 {
         if (connection != null) {
             try {
                 System.out.println("Connection to HANA successful!");
+                System.out.println("USER_NAME\tUSER_ID\tUSERGROUP_NAME" );
+                
                 Statement stmt = connection.createStatement();
                 ResultSet resultSet = stmt.executeQuery("SELECT * from USERS;");
                 while (resultSet.next()) {
