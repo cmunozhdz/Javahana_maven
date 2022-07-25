@@ -48,11 +48,14 @@ public class JavaClient {
                 System.out.println("Connection to HANA successful!");
                 Statement stmt = connection.createStatement();
                 ResultSet resultSet = stmt.executeQuery("SELECT * from USERS;");
+                //USER_NAME,USER_ID,USERGROUP_NAME,USER_MODE,EXTERNAL_IDENTITY,CREATOR,CREATE_TIME,VALID_FROM,VALID_UNTIL,LAST_SUCCESSFUL_CONNECT,LAST_INVALID_CONNECT_ATTEMPT,INVALID_CONNECT_ATTEMPTS,ADMIN_GIVEN_PASSWORD,LAST_PASSWORD_CHANGE_TIME,PASSWORD_CHANGE_NEEDED,IS_PASSWORD_LIFETIME_CHECK_ENABLED,USER_DEACTIVATED,DEACTIVATION_TIME,IS_PASSWORD_ENABLED,IS_KERBEROS_ENABLED,IS_SAML_ENABLED,IS_JWT_ENABLED,IS_LDAP_ENABLED,IS_X509_ENABLED,IS_RESTRICTED,IS_RESTRICTED_DETAILS,IS_CLIENT_CONNECT_ENABLED,HAS_REMOTE_USERS,AUTHORIZATION_MODE,COMMENTS,CREATE_PROVIDER_TYPE,CREATE_PROVIDER_NAME
+                System.out.println("USER_NAME\tUSER_ID\tUSERGROUP_NAME" );
                 while (resultSet.next()) {
-                    String title = resultSet.getString(1);
-                    String firstName = resultSet.getString(2);
-                    String lastName = resultSet.getString(3);
-                    System.out.println(title + " " + firstName + " " + lastName);
+                    String title = resultSet.getString("USER_NAME");
+                    
+                    String firstName = resultSet.getString("USER_ID");
+                    String lastName = resultSet.getString("USERGROUP_NAME");
+                    System.out.println(title + "\t" + firstName + "\t" + lastName);
                 }
             }
             catch (SQLException e) {
